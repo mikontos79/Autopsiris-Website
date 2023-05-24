@@ -41,13 +41,13 @@ header .menu-open ion-icon {
   width: 100%;
 }
 .container h1 {
-  font-family: "Aretha Bridge";
+  font-family: 'Exo', sans-serif;
   font-weight: lighter;
   opacity: 0;
   text-transform: uppercase;
 }
 .container h2 {
-  font-family: "Aretha Bridge";
+  font-family: 'Exo', sans-serif;
   font-weight: lighter;
   opacity: 0;
   text-transform: uppercase;
@@ -109,18 +109,18 @@ header .menu-open ion-icon {
 }
 
 .menu-item .menu-item-number {
-  font-family: "rantera";
+  font-family: 'Exo', sans-serif;
   padding: 0px 20px;
   color: #1f1f1f;
   font-size: 25px;
 }
 .menu-item .menu-item-name {
-  font-family: "rantera";
+  font-family: 'Exo', sans-serif;
   text-transform: uppercase;
   color: #1f1f1f;
 }
 .menu-item .menu-item-sub {
-  font-family: "rantera";
+  font-family: 'Exo', sans-serif;
   font-size: 15px;
   align-self: flex-start;
   padding: 45px 0px;
@@ -169,22 +169,7 @@ span {
   transform: rotate(130deg);
   animation: mtn 20s linear infinite;
 }
-.hill {
-  position: absolute;
-  right: -900px;
-  bottom: -50px;
-  width: 400px;
-  border-radius: 50%;
-  height: 20px;
-  box-shadow: 
-    0 0 0 50px #84afab,
-    -20px 0 0 20px #84afab,
-    -90px 0 0 50px #84afab,
-    250px 0 0 50px #84afab,
-    290px 0 0 50px #84afab,
-    620px 0 0 50px #84afab;
-  animation: hill 4s 2s linear infinite;
-}
+
 .tree, .tree:nth-child(2), .tree:nth-child(3) {
   position: absolute;
   height: 100px; 
@@ -258,15 +243,7 @@ span {
   0%   { right: -200px; }
   100% { right: 2000px; }
 }
-@keyframes truck {
-  0%   { }
-  6%   { transform: translateY(0px); }
-  7%   { transform: translateY(-6px); }
-  9%   { transform: translateY(0px); }
-  10%   { transform: translateY(-1px); }
-  11%   { transform: translateY(0px); }
-  100%   { }
-}
+
 @keyframes wind {
   0%   {  }
   50%   { transform: translateY(3px) }
@@ -275,11 +252,6 @@ span {
 @keyframes mtn {
   100% {
     transform: translateX(-2000px) rotate(130deg);
-  }
-}
-@keyframes hill {
-  100% {
-    transform: translateX(-2000px);
   }
 }
 
@@ -320,7 +292,7 @@ span {
     text-align: center;
   }
   header .logo img{
-    width: 20%;
+    width: 15%;
   }
 }
 
@@ -371,6 +343,7 @@ span {
     text-align: center;
   }
   header .logo img{
-    width: 5%;
+    width: 8%;
   }
 }
+
