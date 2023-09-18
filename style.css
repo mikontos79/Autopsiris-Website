@@ -1,38 +1,15 @@
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+/* Global styles */
 body {
   background-color: #1f1f1f;
   color: #03D1C5;
-  overflow: hidden;
+  font-family: 'hanson', sans-serif;
+  overflow-x: hidden;
 }
-header {
-  position: absolute;
-  display: flex;
-  top: 0;
-  align-items: center;
-  z-index: 50;
-  justify-content: space-between;
-  height: 80px;
-  width: 100%;
-}
-header .logo img{
-  width: 5%;
-  margin-left: 5%;
-  margin-top: 5%;
-}
-header .menu-open {
-  margin-right: 30px;
-}
-header .menu-open ion-icon {
-  font-size: 50px;
-  color: #03D1C5;
-}
+
+/* Container styles */
 .container {
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,100 +17,89 @@ header .menu-open ion-icon {
   height: 100vh;
   width: 100%;
 }
+
 .container h1 {
-  font-family: 'Exo', sans-serif;
-  font-weight: lighter;
-  opacity: 0;
-  text-transform: uppercase;
-}
-.container h2 {
-  font-family: 'Exo', sans-serif;
-  font-weight: lighter;
+  color: white;
+  font-family: 'hanson', sans-serif;
+  font-size: 8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
   opacity: 0;
   text-transform: uppercase;
 }
 
+.container h2 {
+  font-family: 'hanson', sans-serif;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-weight: bold;
+  opacity: 0;
+  margin-top: -10px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #03D1C5;
+}
+
+/* Menu styles */
 .menu-container {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
+  left: -100%; /* Initially hide the menu off-screen */
   width: 100%;
   height: 100vh;
   background-color: #03D1C5;
-  z-index: 100;
-  transform: translateX(500%);
+  z-index: 99; /* Slightly lower than header z-index */
+  transition: left 0.3s ease; /* Add smooth transition */
 }
-.menu-close {
-  position: absolute;
-  right: 30px;
-  top: 40px;
-  transform: translate(-50%, -50%);
-}
+
 .menu-close ion-icon {
-  font-size: 50px;
-  color: #1f1f1f;
+  font-size: 24px;
+  color: #FFFFFF;
+  cursor: pointer;
 }
-.menu-items {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
+
 .menu-items-container {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   width: 70%;
-  margin-left: 10%;
-  margin-right: 20%;
+  margin: 20% 10% 0 20%; /* Adjust margins as needed */
 }
-.menu-items .menu-item {
+
+.menu-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 100px;
-  font-size: 30px;
-  overflow: hidden;
+  height: 80px; /* Adjust height as needed */
+  font-size: 24px; /* Adjust font size */
   cursor: pointer;
-  font-weight: lighter;
-}
-
-.menu-items .line {
-  width: 100%;
-  height: 1px;
-  transform-origin: left;
-  overflow: hidden;
-  background-color: #1f1f1f;
 }
 
 .menu-item .menu-item-number {
-  font-family: 'Exo', sans-serif;
-  padding: 0px 20px;
-  color: #1f1f1f;
-  font-size: 25px;
-}
-.menu-item .menu-item-name {
-  font-family: 'Exo', sans-serif;
-  text-transform: uppercase;
-  color: #1f1f1f;
-}
-.menu-item .menu-item-sub {
-  font-family: 'Exo', sans-serif;
-  font-size: 15px;
-  align-self: flex-start;
-  padding: 45px 0px;
-  color: #1f1f1f;
-}
-.menu-item .menu-item-icon {
+  font-weight: bold;
   padding: 0px 20px;
 }
 
+.menu-item .menu-item-name {
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.menu-item .menu-item-sub {
+  font-size: 15px;
+  margin-top: 10px; /* Add some top margin */
+  color: #FFFFFF;
+}
+
 .menu-item .menu-item-icon ion-icon {
-  font-size: 25px;
+  font-size: 24px; /* Adjust font size */
   transform: rotate(45deg);
-  color: #1f1f1f;
+  color: #FFFFFF;
   font-weight: lighter;
 }
 
@@ -255,95 +221,321 @@ span {
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .container h1  {
-    font-size: 50px; 
-    background-color: #1f1f1f;
-    text-align: center;
-  }
-  .container h2 {
-    font-size: 35px; 
-    background-color: #1f1f1f;
-    text-align: center;
-  }
-  header .logo img{
-    width: 17%;
-  }
-  .menu-item .menu-item-name{
-    font-size: 20px;
-  }
-  .menu-item .menu-item-number{
-    font-size: 15px;
+/* Page content styles */
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+  color: #FFF;
+  margin-top: 40px; /* Adjust the top margin for more space */
+}
 
+
+/* About Me section styles */
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.aboutme-content {
+  text-align: center;
+  margin: 0 auto; /* Center the content horizontally */
+  max-width: 70%;
+}
+
+.aboutme-content img {
+  max-width: 100%; /* Make the image responsive by limiting its width */
+  height: auto; /* Allow the image to maintain its aspect ratio */
+}
+
+
+/* Adjusted h1 and h2 styles */
+.page-content h2 {
+  color: white; /* White text color */
+  font-size: 2rem; /* Adjust font size */
+}
+
+.aboutme-content h3 {
+  font-family: 'hanson', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #03D1C5;
+  margin-top: 30px;
+}
+
+.aboutme-content p {
+  font-family: 'Min Sans', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-top: 8px;
+}
+
+/* Center h1 and h2 */
+h1, h2 {
+  margin: 10px 0;
+}
+
+
+/* Very small devices (less than 320px) */
+@media (max-width: 319px) {
+  .body{
+    display: flex; /* Center-align content horizontally */
+  justify-content: center; /* Center-align content horizontally */
+  align-items: center; /* Center-align content vertically */
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  margin: 0; /* Remove default body margin */
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .container h2 {
+    font-size: 1rem;
+  }
+
+  
+}
+
+/* Small devices (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .body{
+    display: flex; /* Center-align content horizontally */
+  justify-content: center; /* Center-align content horizontally */
+  align-items: center; /* Center-align content vertically */
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  margin: 0; /* Remove default body margin */
+  }
+
+  .container h1 {
+    font-size: 3rem;
+  }
+
+  .container h2 {
+    font-size: 1.4rem;
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* Small devices (480px - 640px) */
+@media (min-width: 481px) and (max-width: 640px) {
+
+  .body{
+    display: flex; /* Center-align content horizontally */
+  justify-content: center; /* Center-align content horizontally */
+  align-items: center; /* Center-align content vertically */
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  margin: 0; /* Remove default body margin */
+  }
+  
   .container h1 {
-    font-size: 100px; 
-    background-color: #1f1f1f;
-    text-align: center;
+    font-size: 3.5rem;
   }
+
   .container h2 {
-    font-size: 50px; 
-    background-color: #1f1f1f;
-    text-align: center;
-  }
-  header .logo img{
-    width: 15%;
+    font-size: 2rem;
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .container h1 {
-    font-size: 130px; 
-    background-color: #1f1f1f;
-    text-align: center;
-  }
-  .container h2 {
-    font-size: 60px; 
-    background-color: #1f1f1f;
-    text-align: center;
-  }
-  header .logo img{
-    width: 15%;
-  }
-} 
+/* Portrait tablets (640px - 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+  .body{
+    display: flex; /* Center-align content horizontally */
+  justify-content: center; /* Center-align content horizontally */
+  align-items: center; /* Center-align content vertically */
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  margin: 0; /* Remove default body margin */
+  }
   .container h1 {
-    font-size: 180px; 
-    background-color: #1f1f1f;
-    text-align: center;
+    font-size: 4rem;
   }
-  .container h2 {
-    font-size: 80px; 
-    background-color: #1f1f1f;
-    text-align: center;
-  }
-  header .logo img{
-    width: 10%;
-  }
-} 
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .container h1 {
-    font-size: 250px; 
-    background-color: #1f1f1f;
-    text-align: center;
-  }
   .container h2 {
-    font-size: 100px; 
-    background-color: #1f1f1f;
-    text-align: center;
-  }
-  header .logo img{
-    width: 8%;
+    font-size: 2.5rem;
   }
 }
 
+/* Landscape tablets (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .body{
+    display: flex; /* Center-align content horizontally */
+  justify-content: center; /* Center-align content horizontally */
+  align-items: center; /* Center-align content vertically */
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  margin: 0; /* Remove default body margin */
+  }
+  .container h1 {
+    font-size: 5rem;
+  }
+
+  .container h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Small desktops (1024px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .container h1 {
+    font-size: 6rem;
+  }
+
+  .container h2 {
+    font-size: 4.5rem;
+  }
+  .about-me-section {
+    display: flex; /* Display content side by side on larger screens */
+    align-items: flex-start;
+  }
+
+  .aboutme-content {
+    text-align: left; /* Align text to the left within the container */
+    display: flex; /* Display content inside aboutme-content as flex */
+  }
+
+  .aboutme-content img {
+    max-width: 50%; 
+    margin-right: 20px; /* Add space between image and text */
+  }
+
+  .aboutme-content .text-container {
+    flex-grow: 1; /* Allow the text container to grow and take available space */
+  }
+
+  .aboutme-content h3 {
+    margin: 0; /* Reset any default margin for the h3 tag */
+  }
+
+  .aboutme-content p {
+    max-width: 70%; /* Set the maximum width for the paragraph */
+    margin-top: 10%; /* Reset top margin for the paragraph */
+  }
+}
+
+/* Medium desktops (1200px - 1440px) */
+@media (min-width: 1201px) and (max-width: 1440px) {
+  .container h1 {
+    font-size: 6.5rem;
+  }
+
+  .container h2 {
+    font-size: 5rem;
+  }
+  .about-me-section {
+    display: flex; /* Display content side by side on larger screens */
+    align-items: flex-start;
+  }
+
+  .aboutme-content {
+    text-align: left; /* Align text to the left within the container */
+    display: flex; /* Display content inside aboutme-content as flex */
+  }
+
+  .aboutme-content img {
+    max-width: 40%; /* Adjust the image width as needed for larger screens */
+    margin-right: 20px; /* Add space between image and text */
+  }
+
+  .aboutme-content .text-container {
+    flex-grow: 1; /* Allow the text container to grow and take available space */
+  }
+
+  .aboutme-content h3 {
+    max-width: 70%; /* Set the maximum width for the paragraph */
+    margin-left: 10%;
+  }
+
+  .aboutme-content p {
+    max-width: 70%; /* Set the maximum width for the paragraph */
+    margin-top: 15%; /* Reset top margin for the paragraph */
+    margin-left: -25%;
+  }
+}
+
+
+/* Large desktops (1440px - 1600px) */
+@media (min-width: 1441px) and (max-width: 1600px) {
+  .container h1 {
+    font-size: 5rem;
+  }
+
+  .container h2 {
+    font-size: 5.5rem;
+  }
+  .about-me-section {
+    display: flex; /* Display content side by side on larger screens */
+    align-items: flex-start;
+  }
+
+  .aboutme-content {
+    text-align: left; /* Align text to the left within the container */
+    display: flex; /* Display content inside aboutme-content as flex */
+  }
+
+  .aboutme-content img {
+    max-width: 40%; /* Adjust the image width as needed for larger screens */
+    margin-right: 20px; /* Add space between image and text */
+  }
+
+  .aboutme-content .text-container {
+    flex-grow: 1; /* Allow the text container to grow and take available space */
+  }
+
+  .aboutme-content h3 {
+    max-width: 70%; /* Set the maximum width for the paragraph */
+    margin-left: 10%;
+  }
+
+  .aboutme-content p {
+    max-width: 70%; /* Set the maximum width for the paragraph */
+    margin-top: 15%; /* Reset top margin for the paragraph */
+    margin-left: -22%;
+  }
+}
+
+/* Extra-large desktops (greater than 1600px) */
+@media (min-width: 1601px) {
+  .container h1 {
+    font-size: 7rem;
+  }
+
+  .container h2 {
+    font-size: 6rem;
+  }
+  .about-me-section {
+    display: flex; /* Display content side by side on larger screens */
+    align-items: flex-start;
+  }
+
+  .aboutme-content {
+    text-align: left; /* Align text to the left within the container */
+    display: flex; /* Display content inside aboutme-content as flex */
+  }
+
+  .aboutme-content img {
+    max-width: 40%; /* Adjust the image width as needed for larger screens */
+    margin-right: 20px; /* Add space between image and text */
+  }
+
+  .aboutme-content .text-container {
+    flex-grow: 1; /* Allow the text container to grow and take available space */
+  }
+
+  .aboutme-content h3 {
+    max-width: 70%; /* Set the maximum width for the paragraph */
+    margin-left: 10%;
+  }
+
+  .aboutme-content p {
+    max-width: 70%; /* Set the maximum width for the paragraph */
+    margin-top: 10%; /* Reset top margin for the paragraph */
+    margin-left: -18%;
+  }
+}
