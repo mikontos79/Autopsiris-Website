@@ -1,4 +1,6 @@
-/* Home page animation */
+/**
+ * HOME PAGE ANIMATION
+ */
 
 const tl1 = gsap.timeline();
 tl1.from(".bg-image", {
@@ -121,8 +123,9 @@ function menuOpen() {
 function menuClose() {
   tl.reverse();
 }
-
-/* End of Home page animation */
+/**
+ * ANIMATED COUNTER
+ */
 
 "use strict";
 const container = document.querySelector("#countercontainer");
@@ -190,19 +193,20 @@ const observer = new IntersectionObserver(obsCallback, obsOptions);
 // #4 Targeteting element to be observed
 observer.observe(container);
 
-/* End of Animated Counter animation */
-
 /**
  * BACK TO TOP BUTTON
  */
-
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 window.addEventListener("scroll", function () {
   const bodyHeight = document.body.scrollHeight;
   const windowHeight = window.innerHeight;
   const scrollEndPos = bodyHeight - windowHeight;
-  const totalScrollPercent = (window.scrollY / scrollEndPos) * 100;
+  let totalScrollPercent = 0;
+
+  if (scrollEndPos > 0) {
+    totalScrollPercent = (window.scrollY / scrollEndPos) * 100;
+  }
 
   backTopBtn.textContent = `${totalScrollPercent.toFixed(0)}%`;
 
@@ -212,5 +216,12 @@ window.addEventListener("scroll", function () {
   } else {
     backTopBtn.classList.remove("show");
   }
+});
+
+backTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Add smooth scrolling behavior
+  });
 });
 

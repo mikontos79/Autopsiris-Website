@@ -195,7 +195,7 @@ body {
 /* Adjusted h1 and h2 styles */
 .page-content h2 {
   color: white; /* White text color */
-  font-size: 2rem; /* Adjust font size */
+  font-size: 2.5rem; /* Adjust font size */
 }
 
 .aboutme-content h3 {
@@ -232,9 +232,9 @@ h1, h2 {
 
 #countercontainer {
   width: 100%; /* Take up full width initially */
-  padding: 20px;
+  padding-top: 20px;
   text-align: center;
-  margin: 10px;
+  margin-top: 10px;
   box-sizing: border-box; /* Include padding and border in width */
 }
 
@@ -247,6 +247,34 @@ h1, h2 {
 p {
   font-size: 2rem;
   font-weight: 700;
+}
+
+hr{
+
+  width: 70%;
+}
+
+.page-content h2{
+  margin-bottom: 5%;
+}
+
+.services{
+  width: 70%;
+  text-align: left;
+}
+.services h3{
+  font-family: 'Hanson', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #03D1C5;
+}
+
+.services p{
+  font-family: 'Min Sans Thin', sans-serif;
+  font-size: 1.2rem;
+  margin-top: -2%;
 }
 
 
