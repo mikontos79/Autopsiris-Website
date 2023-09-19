@@ -44,75 +44,12 @@ body {
   -webkit-text-stroke-color: #03D1C5;
 }
 
-/* Menu styles */
-.menu-container {
-  position: fixed;
-  top: 0;
-  left: -100%; /* Initially hide the menu off-screen */
-  width: 100%;
-  height: 100vh;
-  background-color: #03D1C5;
-  z-index: 99; /* Slightly lower than header z-index */
-  transition: left 0.3s ease; /* Add smooth transition */
-}
-
-.menu-close ion-icon {
-  font-size: 24px;
-  color: #FFFFFF;
-  cursor: pointer;
-}
-
-.menu-items-container {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  margin: 20% 10% 0 20%; /* Adjust margins as needed */
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px; /* Adjust height as needed */
-  font-size: 24px; /* Adjust font size */
-  cursor: pointer;
-}
-
-.menu-item .menu-item-number {
-  font-weight: bold;
-  padding: 0px 20px;
-}
-
-.menu-item .menu-item-name {
-  text-transform: uppercase;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
-}
-
-.menu-item .menu-item-sub {
-  font-size: 15px;
-  margin-top: 10px; /* Add some top margin */
-  color: #FFFFFF;
-}
-
-.menu-item .menu-item-icon ion-icon {
-  font-size: 24px; /* Adjust font size */
-  transform: rotate(45deg);
-  color: #FFFFFF;
-  font-weight: lighter;
-}
-
-span {
-  overflow: hidden;
-}
-
 .loop-wrapper {
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  width: 600px;
+  width: 300px;
   height: 250px;
   overflow: hidden;
   border-bottom: 3px solid #fff;
@@ -274,7 +211,7 @@ span {
 .aboutme-content p {
   font-family: 'Min Sans Thin', sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.3;
   margin-top: 8px;
 }
@@ -284,16 +221,77 @@ h1, h2 {
   margin: 10px 0;
 }
 
+.container2 {
+  display: flex;
+  justify-content: center;
+  margin: 8rem auto;
+  transition: all 0.2s;
+  font-family: 'Hanson', sans-serif;
+  flex-wrap: wrap; /* Allow flex items to wrap */
+}
+
+#countercontainer {
+  width: 100%; /* Take up full width initially */
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+#countercontainer span {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
+.back-top-btn {
+  font-family: 'Min Sans Thin', sans-serif;
+  position: fixed;
+  bottom: 30px;
+  right: -90px;
+  width: 50px;
+  height: 50px;
+  border: 1px dashed currentColor;
+  color:#03D1C5;
+  font-size: 1rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  transition: 0.5s ease;
+  z-index: 3;
+  text-decoration: none;
+}
+
+.back-top-btn.show {
+  transform: translateX(-100px);
+  visibility: visible;
+}
+
+.back-top-btn:hover { 
+  color: #03D1C5; 
+}
+
+
 
 /* Very small devices (less than 320px) */
 @media (max-width: 319px) {
-  .body{
-    display: flex; /* Center-align content horizontally */
-  justify-content: center; /* Center-align content horizontally */
-  align-items: center; /* Center-align content vertically */
-  min-height: 100vh; /* Ensure the body takes up the full viewport height */
-  margin: 0; /* Remove default body margin */
+  /* Center-align content */
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
   }
+
+  /* Adjust font sizes for headings */
   .container h1 {
     font-size: 2rem;
   }
@@ -301,20 +299,28 @@ h1, h2 {
   .container h2 {
     font-size: 1rem;
   }
+  .container {
+    max-width: 100%; /* Full width for very small screens */
+  }
 
-  
+  .container2 {
+    max-width: 100%; /* Full width for very small screens */
+  }
 }
+
 
 /* Small devices (320px - 480px) */
 @media (min-width: 320px) and (max-width: 480px) {
-  .body{
-    display: flex; /* Center-align content horizontally */
-  justify-content: center; /* Center-align content horizontally */
-  align-items: center; /* Center-align content vertically */
-  min-height: 100vh; /* Ensure the body takes up the full viewport height */
-  margin: 0; /* Remove default body margin */
+  /* Center-align content */
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
   }
 
+  /* Adjust font sizes for headings */
   .container h1 {
     font-size: 3rem;
   }
@@ -322,19 +328,28 @@ h1, h2 {
   .container h2 {
     font-size: 1.4rem;
   }
+  .container {
+    max-width: 100%; /* Full width for very small screens */
+  }
+
+  .container2 {
+    max-width: 100%; /* Full width for very small screens */
+  }
 }
+
 
 /* Small devices (480px - 640px) */
 @media (min-width: 481px) and (max-width: 640px) {
-
-  .body{
-    display: flex; /* Center-align content horizontally */
-  justify-content: center; /* Center-align content horizontally */
-  align-items: center; /* Center-align content vertically */
-  min-height: 100vh; /* Ensure the body takes up the full viewport height */
-  margin: 0; /* Remove default body margin */
+  /* Center-align content */
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
   }
-  
+
+  /* Adjust font sizes for headings */
   .container h1 {
     font-size: 3.5rem;
   }
@@ -342,18 +357,28 @@ h1, h2 {
   .container h2 {
     font-size: 2rem;
   }
+  .container {
+    max-width: 100%; /* Full width for very small screens */
+  }
+
+  .container2 {
+    max-width: 100%; /* Full width for very small screens */
+  }
 }
+
 
 /* Portrait tablets (640px - 768px) */
 @media (min-width: 641px) and (max-width: 768px) {
-
-  .body{
-    display: flex; /* Center-align content horizontally */
-  justify-content: center; /* Center-align content horizontally */
-  align-items: center; /* Center-align content vertically */
-  min-height: 100vh; /* Ensure the body takes up the full viewport height */
-  margin: 0; /* Remove default body margin */
+  /* Center-align content */
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
   }
+
+  /* Adjust font sizes for headings */
   .container h1 {
     font-size: 4rem;
   }
@@ -361,18 +386,28 @@ h1, h2 {
   .container h2 {
     font-size: 2.5rem;
   }
+  .container {
+    max-width: 100%; /* Full width for very small screens */
+  }
+
+  .container2 {
+    max-width: 100%; /* Full width for very small screens */
+  }
 }
+
 
 /* Landscape tablets (768px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-
-  .body{
-    display: flex; /* Center-align content horizontally */
-  justify-content: center; /* Center-align content horizontally */
-  align-items: center; /* Center-align content vertically */
-  min-height: 100vh; /* Ensure the body takes up the full viewport height */
-  margin: 0; /* Remove default body margin */
+  /* Center-align content */
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
   }
+
+  /* Adjust font sizes for headings */
   .container h1 {
     font-size: 5rem;
   }
@@ -380,10 +415,19 @@ h1, h2 {
   .container h2 {
     font-size: 3rem;
   }
+  .container {
+    max-width: 800px; /* Adjust the max-width for tablets */
+  }
+
+  .container2 {
+    max-width: 1000px; /* Adjust the max-width for tablets */
+  }
 }
+
 
 /* Small desktops (1024px - 1200px) */
 @media (min-width: 1025px) and (max-width: 1200px) {
+  /* Adjust font sizes for headings */
   .container h1 {
     font-size: 6rem;
   }
@@ -391,37 +435,48 @@ h1, h2 {
   .container h2 {
     font-size: 4.5rem;
   }
+
+  /* Customize layout for larger screens */
   .about-me-section {
-    display: flex; /* Display content side by side on larger screens */
+    display: flex;
     align-items: flex-start;
   }
 
   .aboutme-content {
-    text-align: left; /* Align text to the left within the container */
-    display: flex; /* Display content inside aboutme-content as flex */
+    text-align: left;
+    display: flex;
   }
 
   .aboutme-content img {
-    max-width: 50%; 
-    margin-right: 20px; /* Add space between image and text */
+    max-width: 50%;
+    margin-right: 20px;
   }
 
   .aboutme-content .text-container {
-    flex-grow: 1; /* Allow the text container to grow and take available space */
+    flex-grow: 1;
   }
 
   .aboutme-content h3 {
-    margin: 0; /* Reset any default margin for the h3 tag */
+    margin: 0;
   }
 
   .aboutme-content p {
-    max-width: 70%; /* Set the maximum width for the paragraph */
-    margin-top: 10%; /* Reset top margin for the paragraph */
+    max-width: 70%;
+    margin-top: 10%;
+  }
+  .container2 {
+    justify-content: space-between; /* Display sections next to each other */
+  }
+
+  #countercontainer {
+    width: calc(33.33% - 20px); /* Create three equal-width columns */
   }
 }
 
+
 /* Medium desktops (1200px - 1440px) */
 @media (min-width: 1201px) and (max-width: 1440px) {
+  /* Adjust font sizes for headings */
   .container h1 {
     font-size: 6.5rem;
   }
@@ -429,40 +484,51 @@ h1, h2 {
   .container h2 {
     font-size: 5rem;
   }
+
+  /* Customize layout for larger screens */
   .about-me-section {
-    display: flex; /* Display content side by side on larger screens */
+    display: flex;
     align-items: flex-start;
   }
 
   .aboutme-content {
-    text-align: left; /* Align text to the left within the container */
-    display: flex; /* Display content inside aboutme-content as flex */
+    text-align: left;
+    display: flex;
   }
 
   .aboutme-content img {
-    max-width: 40%; /* Adjust the image width as needed for larger screens */
-    margin-right: 20px; /* Add space between image and text */
+    max-width: 40%;
+    margin-right: 20px;
   }
 
   .aboutme-content .text-container {
-    flex-grow: 1; /* Allow the text container to grow and take available space */
+    flex-grow: 1;
   }
 
   .aboutme-content h3 {
-    max-width: 70%; /* Set the maximum width for the paragraph */
+    max-width: 70%;
     margin-left: 10%;
   }
 
   .aboutme-content p {
-    max-width: 70%; /* Set the maximum width for the paragraph */
-    margin-top: 15%; /* Reset top margin for the paragraph */
+    max-width: 70%;
+    margin-top: 15%;
     margin-left: -25%;
+  }
+  .container2 {
+    justify-content: space-between; /* Display sections next to each other */
+  }
+
+  #countercontainer {
+    width: calc(33.33% - 20px); /* Create three equal-width columns */
   }
 }
 
 
+
 /* Large desktops (1440px - 1600px) */
 @media (min-width: 1441px) and (max-width: 1600px) {
+  /* Adjust font sizes for headings */
   .container h1 {
     font-size: 5rem;
   }
@@ -470,39 +536,50 @@ h1, h2 {
   .container h2 {
     font-size: 5.5rem;
   }
+
+  /* Customize layout for larger screens */
   .about-me-section {
-    display: flex; /* Display content side by side on larger screens */
+    display: flex;
     align-items: flex-start;
   }
 
   .aboutme-content {
-    text-align: left; /* Align text to the left within the container */
-    display: flex; /* Display content inside aboutme-content as flex */
+    text-align: left;
+    display: flex;
   }
 
   .aboutme-content img {
-    max-width: 40%; /* Adjust the image width as needed for larger screens */
-    margin-right: 20px; /* Add space between image and text */
+    max-width: 40%;
+    margin-right: 20px;
   }
 
   .aboutme-content .text-container {
-    flex-grow: 1; /* Allow the text container to grow and take available space */
+    flex-grow: 1;
   }
 
   .aboutme-content h3 {
-    max-width: 70%; /* Set the maximum width for the paragraph */
+    max-width: 70%;
     margin-left: 10%;
   }
 
   .aboutme-content p {
-    max-width: 70%; /* Set the maximum width for the paragraph */
-    margin-top: 15%; /* Reset top margin for the paragraph */
+    max-width: 70%;
+    margin-top: 15%;
     margin-left: -22%;
+  }
+  .container2 {
+    justify-content: space-between; /* Display sections next to each other */
+  }
+
+  #countercontainer {
+    width: calc(33.33% - 20px); /* Create three equal-width columns */
   }
 }
 
+
 /* Extra-large desktops (greater than 1600px) */
 @media (min-width: 1601px) {
+  /* Adjust font sizes for headings */
   .container h1 {
     font-size: 7rem;
   }
@@ -510,33 +587,43 @@ h1, h2 {
   .container h2 {
     font-size: 6rem;
   }
+
+  /* Customize layout for larger screens */
   .about-me-section {
-    display: flex; /* Display content side by side on larger screens */
+    display: flex;
     align-items: flex-start;
   }
 
   .aboutme-content {
-    text-align: left; /* Align text to the left within the container */
-    display: flex; /* Display content inside aboutme-content as flex */
+    text-align: left;
+    display: flex;
   }
 
   .aboutme-content img {
-    max-width: 40%; /* Adjust the image width as needed for larger screens */
-    margin-right: 20px; /* Add space between image and text */
+    max-width: 40%;
+    margin-right: 20px;
   }
 
   .aboutme-content .text-container {
-    flex-grow: 1; /* Allow the text container to grow and take available space */
+    flex-grow: 1;
   }
 
   .aboutme-content h3 {
-    max-width: 70%; /* Set the maximum width for the paragraph */
+    max-width: 70%;
     margin-left: 10%;
   }
 
   .aboutme-content p {
-    max-width: 70%; /* Set the maximum width for the paragraph */
-    margin-top: 10%; /* Reset top margin for the paragraph */
+    max-width: 70%;
+    margin-top: 10%;
     margin-left: -18%;
   }
+  .container2 {
+    justify-content: space-between; /* Display sections next to each other */
+  }
+
+  #countercontainer {
+    width: calc(33.33% - 20px); /* Create three equal-width columns */
+  }
 }
+

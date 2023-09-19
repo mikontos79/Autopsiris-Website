@@ -1,3 +1,5 @@
+/* Home page animation */
+
 const tl1 = gsap.timeline();
 tl1.from(".bg-image", {
   opacity: 0,
@@ -119,4 +121,96 @@ function menuOpen() {
 function menuClose() {
   tl.reverse();
 }
+
+/* End of Home page animation */
+
+"use strict";
+const container = document.querySelector("#countercontainer");
+const experienceCount = document.querySelectorAll("#experience");
+const projectsCount = document.querySelectorAll("#projects");
+const clientsCount = document.querySelectorAll("#clients");
+
+const counter = function () {
+  const experience = setInterval(() => {
+    experienceCount.forEach((e) => {
+      const target = 3; // Target number
+      let input = e;
+      let data = input.textContent;
+      if (data < target) {
+        data = e.textContent++;
+        // console.log(data);
+      }
+    });
+  }, 150); // 0.15 | Seconds Adjust ms for speed
+
+  const projects = setInterval(() => {
+    projectsCount.forEach((e) => {
+      const target = 150; // Target number
+
+      let input = e;
+      let data = input.textContent;
+      if (data < target) {
+        data = e.textContent++;
+        // console.log(data);
+      }
+    });
+  }, 15); 
+
+  const clients = setInterval(() => {
+    clientsCount.forEach((e) => {
+      const target = 100; // Target number
+      let input = e;
+      let data = input.textContent;
+      if (data < target) {
+        data = e.textContent++;
+      }
+    });
+  }, 12.5); // 0.0125 Seconds| Adjust ms for speed
+};
+
+// Intersection Observer API
+
+// #1 Creating options - contains setting for observer
+const obsOptions = {
+  root: null, // Since we are watching target
+  threshold: 1,
+};
+
+// #2 Creating callback function
+const obsCallback = function (entries) {
+  const [entry] = entries;
+  // console.log(entry);
+  if (!entry.isIntersecting) return;
+  counter();
+};
+
+// #3 Create Observer
+const observer = new IntersectionObserver(obsCallback, obsOptions);
+
+// #4 Targeteting element to be observed
+observer.observe(container);
+
+/* End of Animated Counter animation */
+
+/**
+ * BACK TO TOP BUTTON
+ */
+
+const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+window.addEventListener("scroll", function () {
+  const bodyHeight = document.body.scrollHeight;
+  const windowHeight = window.innerHeight;
+  const scrollEndPos = bodyHeight - windowHeight;
+  const totalScrollPercent = (window.scrollY / scrollEndPos) * 100;
+
+  backTopBtn.textContent = `${totalScrollPercent.toFixed(0)}%`;
+
+  // visible back top btn when scrolled 5% of the page
+  if (totalScrollPercent > 5) {
+    backTopBtn.classList.add("show");
+  } else {
+    backTopBtn.classList.remove("show");
+  }
+});
 
