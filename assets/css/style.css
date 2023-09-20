@@ -392,15 +392,20 @@ img{
 
 .fas, .fab {
   padding-right: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.fab{
+  margin-bottom: 5rem;
 }
 
 .map {
   text-align: right;
   box-shadow: 5px 5px 10px #03D1C5;
   border-radius: 5px;
-  align-items: flex-end; /* Align items to the end of the flex container */
-  width:600px; 
-  height:450px;
+  align-items: flex-end;
+
 }
 
 .contact-content h3 {
@@ -492,12 +497,9 @@ img{
     margin: 0 auto; /* Center the content horizontally */
     max-width: 90%; /* Adjusted to take up 90% of the page width on smaller screens */
   }
-
-  .map {
-    margin-top: 20px; /* Add some space between content and map */
-    text-align: center; /* Center the map horizontally */
-    width: 90%; /* Adjusted width for smaller screens */
-    height: auto; /* Adjusted height to maintain aspect ratio */
+  .map iframe {
+    width: 100%; /* Make the map iframe take up the full width of its container */
+    height: 300px; /* Adjust the height as needed for your design */
   }
 
   .contact-content h3 {
@@ -538,6 +540,7 @@ img{
   .contact-me-section {
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center items horizontally */
+    margin-top: 10%;
   }
 
   .contact-content {
@@ -546,12 +549,9 @@ img{
     margin: 0 auto; /* Center the content horizontally */
     max-width: 90%; /* Adjusted to take up 90% of the page width on smaller screens */
   }
-
-  .map {
-    margin-top: 20px; /* Add some space between content and map */
-    text-align: center; /* Center the map horizontally */
-    width: 90%; /* Adjusted width for smaller screens */
-    height: auto; /* Adjusted height to maintain aspect ratio */
+  .map iframe {
+    width: 100%; /* Make the map iframe take up the full width of its container */
+    height: 300px; /* Adjust the height as needed for your design */
   }
 
   .contact-content h3 {
@@ -601,11 +601,9 @@ img{
     max-width: 90%; /* Adjusted to take up 90% of the page width on smaller screens */
   }
 
-  .map {
-    margin-top: 20px; /* Add some space between content and map */
-    text-align: center; /* Center the map horizontally */
-    width: 90%; /* Adjusted width for smaller screens */
-    height: auto; /* Adjusted height to maintain aspect ratio */
+  .map iframe {
+    width: 100%; /* Make the map iframe take up the full width of its container */
+    height: 300px; /* Adjust the height as needed for your design */
   }
 
   .contact-content h3 {
@@ -654,12 +652,9 @@ img{
     margin: 0 auto; /* Center the content horizontally */
     max-width: 90%; /* Adjusted to take up 90% of the page width on smaller screens */
   }
-
-  .map {
-    margin-top: 20px; /* Add some space between content and map */
-    text-align: center; /* Center the map horizontally */
-    width: 90%; /* Adjusted width for smaller screens */
-    height: auto; /* Adjusted height to maintain aspect ratio */
+  .map iframe {
+    width: 100%; /* Make the map iframe take up the full width of its container */
+    height: 300px; /* Adjust the height as needed for your design */
   }
 
   .contact-content h3 {
@@ -699,12 +694,9 @@ img{
     margin: 0 auto; /* Center the content horizontally */
     max-width: 90%; /* Adjusted to take up 90% of the page width on smaller screens */
   }
-
-  .map {
-    margin-top: 20px; /* Add some space between content and map */
-    text-align: center; /* Center the map horizontally */
-    width: 90%; /* Adjusted width for smaller screens */
-    height: auto; /* Adjusted height to maintain aspect ratio */
+  .map iframe {
+    width: 100%; /* Make the map iframe take up the full width of its container */
+    height: 300px; /* Adjust the height as needed for your design */
   }
 
   .contact-content h3 {
