@@ -376,6 +376,35 @@ img{
 	display: none;
 }
 
+/* About Me section styles */
+
+
+.contact-content {
+  text-align: center;
+  margin: 0 auto; /* Center the content horizontally */
+  max-width: 70%;
+}
+.contact-content h3 {
+  font-family: 'Hanson', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #03D1C5;
+}
+
+.contact-content p {
+  font-family: 'Min Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin-top: 8px;
+}
+
+.map{
+ align-items: end;
+}
+
 
 .back-top-btn {
   font-family: 'Min Sans', sans-serif;
