@@ -192,6 +192,8 @@ body {
 .aboutme-content img {
   max-width: 100%; /* Make the image responsive by limiting its width */
   height: auto; /* Allow the image to maintain its aspect ratio */
+  box-shadow: 5px 5px 10px #03D1C5; 
+  border-radius: 5px;
 }
 
 
@@ -291,16 +293,11 @@ hr{
 
 marquee {
   padding-top: 2rem;
+  padding-bottom: 6rem;
   color: white;
   width: 100%; /* Make it twice as wide to ensure content repeats */
   height: 100px;
   font-size: 5rem;
-}
-
-/* Reset the marquee when it reaches the end */
-marquee:hover {
-  -webkit-animation: none; /* Disable animation on hover */
-  animation: none;
 }
 
 .rotating-asterisk {
@@ -376,14 +373,36 @@ img{
 	display: none;
 }
 
-/* About Me section styles */
-
+.contact-me-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
 
 .contact-content {
-  text-align: center;
+  flex: 1;
+  text-align: left;
+  padding-right: 50px;
+  text-align: center; /* Center the content horizontally */
   margin: 0 auto; /* Center the content horizontally */
   max-width: 70%;
 }
+
+.fas, .fab {
+  padding-right: 20px;
+}
+
+.map {
+  text-align: right;
+  box-shadow: 5px 5px 10px #03D1C5;
+  border-radius: 5px;
+  align-items: flex-end; /* Align items to the end of the flex container */
+  width:600px; 
+  height:450px;
+}
+
 .contact-content h3 {
   font-family: 'Hanson', sans-serif;
   font-size: 2rem;
@@ -399,10 +418,7 @@ img{
   font-size: 1.2rem;
   line-height: 1.3;
   margin-top: 8px;
-}
-
-.map{
- align-items: end;
+  padding-top: 10%;
 }
 
 
@@ -465,6 +481,28 @@ img{
   .gallery .gallery-item{
 		width: 50%;
 	}
+  .contact-me-section {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .contact-content {
+    padding-right: 0; /* Remove padding on smaller screens */
+    text-align: center; /* Center the content horizontally */
+    margin: 0 auto; /* Center the content horizontally */
+    max-width: 90%; /* Adjusted to take up 90% of the page width on smaller screens */
+  }
+
+  .map {
+    margin-top: 20px; /* Add some space between content and map */
+    text-align: center; /* Center the map horizontally */
+    width: 90%; /* Adjusted width for smaller screens */
+    height: auto; /* Adjusted height to maintain aspect ratio */
+  }
+
+  .contact-content h3 {
+    font-size: 1.5rem; /* Smaller font size on smaller screens */
+  }
 }
 
 
@@ -497,6 +535,28 @@ img{
   .gallery .gallery-item{
 		width: 50%;
 	}
+  .contact-me-section {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .contact-content {
+    padding-right: 0; /* Remove padding on smaller screens */
+    text-align: center; /* Center the content horizontally */
+    margin: 0 auto; /* Center the content horizontally */
+    max-width: 90%; /* Adjusted to take up 90% of the page width on smaller screens */
+  }
+
+  .map {
+    margin-top: 20px; /* Add some space between content and map */
+    text-align: center; /* Center the map horizontally */
+    width: 90%; /* Adjusted width for smaller screens */
+    height: auto; /* Adjusted height to maintain aspect ratio */
+  }
+
+  .contact-content h3 {
+    font-size: 1.5rem; /* Smaller font size on smaller screens */
+  }
 }
 
 
@@ -529,6 +589,28 @@ img{
   .gallery .gallery-item{
 		width: 50%;
 	}
+  .contact-me-section {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .contact-content {
+    padding-right: 0; /* Remove padding on smaller screens */
+    text-align: center; /* Center the content horizontally */
+    margin: 0 auto; /* Center the content horizontally */
+    max-width: 90%; /* Adjusted to take up 90% of the page width on smaller screens */
+  }
+
+  .map {
+    margin-top: 20px; /* Add some space between content and map */
+    text-align: center; /* Center the map horizontally */
+    width: 90%; /* Adjusted width for smaller screens */
+    height: auto; /* Adjusted height to maintain aspect ratio */
+  }
+
+  .contact-content h3 {
+    font-size: 1.5rem; /* Smaller font size on smaller screens */
+  }
 }
 
 
@@ -561,6 +643,28 @@ img{
   .gallery .gallery-item{
 		width: 50%;
 	}
+  .contact-me-section {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .contact-content {
+    padding-right: 0; /* Remove padding on smaller screens */
+    text-align: center; /* Center the content horizontally */
+    margin: 0 auto; /* Center the content horizontally */
+    max-width: 90%; /* Adjusted to take up 90% of the page width on smaller screens */
+  }
+
+  .map {
+    margin-top: 20px; /* Add some space between content and map */
+    text-align: center; /* Center the map horizontally */
+    width: 90%; /* Adjusted width for smaller screens */
+    height: auto; /* Adjusted height to maintain aspect ratio */
+  }
+
+  .contact-content h3 {
+    font-size: 1.5rem; /* Smaller font size on smaller screens */
+  }
 }
 
 
@@ -584,6 +688,28 @@ img{
   .gallery .gallery-item{
 		width: 50%;
 	}
+  .contact-me-section {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .contact-content {
+    padding-right: 0; /* Remove padding on smaller screens */
+    text-align: center; /* Center the content horizontally */
+    margin: 0 auto; /* Center the content horizontally */
+    max-width: 90%; /* Adjusted to take up 90% of the page width on smaller screens */
+  }
+
+  .map {
+    margin-top: 20px; /* Add some space between content and map */
+    text-align: center; /* Center the map horizontally */
+    width: 90%; /* Adjusted width for smaller screens */
+    height: auto; /* Adjusted height to maintain aspect ratio */
+  }
+
+  .contact-content h3 {
+    font-size: 1.5rem; /* Smaller font size on smaller screens */
+  }
 }
 
 
