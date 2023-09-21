@@ -250,3 +250,11 @@ filterContainer.addEventListener("click", (event) =>{
      });
   }
 });
+
+/**
+ * AOS ANIMATION
+ */
+AOS.init({
+  duration: 1200,
+})
+

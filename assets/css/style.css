@@ -329,7 +329,6 @@ img{
 }
 .gallery{
 	width: 100%;
-	display: block;
 	min-height: 100vh;
 }
 .gallery .gallery-filter{
@@ -351,7 +350,6 @@ img{
 	color: #03D1C5;
 }
 .gallery .gallery-item{
-	width: calc(100% / 3);
 	padding: 15px;
 }
 .gallery .gallery-item-inner img{
